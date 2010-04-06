@@ -16,6 +16,7 @@ Group:		Development/Languages/Perl
 Source0:	http://search.cpan.org/CPAN/authors/id/R/RJ/RJBS/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	d8239dcea15b43f07211451547d860f0
 URL:		http://search.cpan.org/dist/String-RewritePrefix/
+BuildRequires:	perl-Sub-Exporter
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with autodeps} || %{with tests}
