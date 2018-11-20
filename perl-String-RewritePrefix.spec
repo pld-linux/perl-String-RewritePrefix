@@ -1,6 +1,5 @@
 #
 # Conditional build:
-%bcond_without	autodeps	# don't BR packages needed only for resolving deps
 %bcond_without	tests		# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
@@ -9,25 +8,24 @@
 Summary:	String::RewritePrefix - rewrite strings based on a set of known prefixes
 Summary(pl.UTF-8):	String::RewritePrefix - przepisz łańcucy znaków w oparciu o zbiór znanych prefiksów
 Name:		perl-String-RewritePrefix
-Version:	0.006
+Version:	0.007
 Release:	1
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://search.cpan.org/CPAN/authors/id/R/RJ/RJBS/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	95ab415fe725d2de9dbf35bbeba08962
+# Source0-md5:	7135a69bd8cf74cf17dba857b2372d16
 URL:		http://search.cpan.org/dist/String-RewritePrefix/
 BuildRequires:	perl-Sub-Exporter
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-%if %{with autodeps} || %{with tests}
-%endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
+Perl library to rewrite strings based on string prefixes.
 
-# %description -l pl.UTF-8
-# TODO
+%description -l pl.UTF-8
+Biblioteka Perla do przepisywania lancuow na bazie prefiksow.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
