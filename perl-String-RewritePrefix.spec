@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests		# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define	pdir	String
 %define	pnam	RewritePrefix
 Summary:	String::RewritePrefix - rewrite strings based on a set of known prefixes
